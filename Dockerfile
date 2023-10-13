@@ -15,7 +15,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN node --max_old_space_size=8100 ./node_modules/@angular/cli/bin/ng build  --configuration=development --baseHref=/lms-ui/
+RUN node --max_old_space_size=8100 ./node_modules/@angular/cli/bin/ng build  --prod --baseHref=/lms-ui/
 # RUN node --max_old_space_size=8100 ./node_modules/@angular/cli/bin/ng build --prod
 
  
