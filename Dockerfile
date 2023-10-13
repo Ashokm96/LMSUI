@@ -1,4 +1,5 @@
-FROM node:12.16.3-alpine as node
+FROM node:14-alpine as node
+#FROM node:12.16.3-alpine as node
 #FROM node:12-alpine as node 
 RUN apk update \
 && apk add --virtual build-dependencies \
