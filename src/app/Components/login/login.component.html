@@ -1,0 +1,21 @@
+  <div class="login-container">
+    <h2>Sign in to LMS</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="Username" required (input)="emptyError()">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password" required (input)="emptyError()">
+      </div>
+      <div style="color:red;font-family:sans-serif">{{error}}</div>
+      <div>
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      </div>
+      <div style="margin: 25px 60px;">
+        <!--<label>Not a member? <a class="signup" href="http://localhost:49814/home">SignUp</a></label>-->
+        <label>Not a member? <a class="signup" [routerLink]="['/register']">SignUp</a></label>
+      </div>
+    </form>
+  </div>

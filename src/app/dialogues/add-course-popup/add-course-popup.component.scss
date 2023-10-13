@@ -1,0 +1,53 @@
+.form-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family:sans-serif;
+/*  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right:15px;
+  font-family:sans-serif;
+}
+
+button:disabled {
+    opacity:0.5;
+    cursor:not-allowed;
+}
+
+.error-text{
+    color:red;
+    font-size:14px;
+    font-family:sans-serif;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #f1f1f1 !important;
+}
